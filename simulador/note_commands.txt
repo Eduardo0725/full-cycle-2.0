@@ -1,0 +1,7 @@
+docker exec -it kafka_kafka_1 bash
+
+kafka-console-consumer --bootstrap-server=localhost:9092 --topic=readtest
+kafka-console-producer --bootstrap-server=localhost:9092 --topic=readtest
+
+kafka-console-consumer --bootstrap-server=localhost:9092 --topic=route.new-direction
+kafka-console-consumer --bootstrap-server=localhost:9092 --topic=route.new-position --group=terminal
